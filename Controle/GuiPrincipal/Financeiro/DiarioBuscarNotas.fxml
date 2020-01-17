@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="706.0" prefWidth="1166.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Financeiro.DiarioBuscarNotasController">
+    <stylesheets>
+        <URL value="@/GuiPrincipal/controle.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="notasAbertoTabela" layoutX="10.0" layoutY="10.0" prefHeight="644.0" prefWidth="1146.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <columns>
+            <TableColumn fx:id="diarioNota" prefWidth="75.0" text="Diario" />
+            <TableColumn fx:id="numeroNota" prefWidth="170.0" text="Numero" />
+            <TableColumn fx:id="fornecedorNota" prefWidth="230.0" text="Fornecedor" />
+            <TableColumn fx:id="cnpjNota" prefWidth="170.0" text="CNPJ" />
+            <TableColumn fx:id="vencimentoNota" prefWidth="170.0" text="Vencimento" />
+            <TableColumn fx:id="vencimentoRealNota" prefWidth="170.0" text="Vencimento Real" />
+            <TableColumn fx:id="valorNota" prefWidth="170.0" text="Valor" />
+            <TableColumn fx:id="descontoNota" prefWidth="170.0" text="Desconto" />
+            <TableColumn fx:id="jurosNota" prefWidth="170.0" text="Juros" />
+            <TableColumn fx:id="valorLiquidoNota" prefWidth="170.0" text="Valor Liquido" />
+            <TableColumn fx:id="tipoNota" prefWidth="170.0" text="Tipo" />
+            <TableColumn fx:id="linhaNota" prefWidth="170.0" text="Linha" />
+            <TableColumn fx:id="codigoNota" prefWidth="170.0" text="Codigo" />
+            <TableColumn fx:id="classificadaNota" prefWidth="75.0" text="Classificada" />
+         </columns>
+      </TableView>
+      <Button layoutX="1100.0" layoutY="667.0" mnemonicParsing="false" onAction="#incluir" text="Incluir" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="10.0" />
+      <Button layoutX="10.0" layoutY="667.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="10.0" />
+   </children>
+</AnchorPane>

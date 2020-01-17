@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="216.0" prefWidth="312.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <ProgressBar fx:id="barraCarregar2" layoutX="14.0" layoutY="282.0" prefHeight="18.0" prefWidth="432.0" progress="0.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <ProgressIndicator fx:id="circuloCarregar1" layoutX="2.0" layoutY="1.0" prefHeight="148.0" prefWidth="312.0" progress="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <Label fx:id="status" layoutX="14.0" layoutY="150.0" prefHeight="17.0" prefWidth="284.0" text="Label" />
+   </children>
+</AnchorPane>

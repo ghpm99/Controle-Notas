@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="706.0" prefWidth="1166.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="GuiPrincipal.Nota.MostrarNotasController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="notas" prefHeight="606.0" prefWidth="702.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="numero" prefWidth="110.0" text="Numero" />
+            <TableColumn fx:id="serie" prefWidth="70.0" text="Serie" />
+            <TableColumn fx:id="fornecedor" prefWidth="230.0" text="Fornecedor" />
+            <TableColumn fx:id="descricao" prefWidth="230.0" text="Descrição" />
+            <TableColumn fx:id="valor" prefWidth="100.0" text="Valor" />
+            <TableColumn fx:id="vencimento" prefWidth="110.0" text="Vencimento" />
+            <TableColumn fx:id="vencimentoReal" prefWidth="110.0" text="Vencimento Real" />
+            <TableColumn fx:id="aprovado" prefWidth="75.0" text="Aprovado" />
+            <TableColumn fx:id="tipo" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="prenota" prefWidth="75.0" text="Pre Nota" />
+            <TableColumn fx:id="classificada" prefWidth="75.0" text="Classificada" />
+            <TableColumn fx:id="lancada" prefWidth="75.0" text="Lançada" />
+            <TableColumn fx:id="observacao" prefWidth="350.0" text="Observação" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

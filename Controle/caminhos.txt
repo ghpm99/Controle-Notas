@@ -1,0 +1,4 @@
+rede=C://Kardex//
+local=C://Kardex//
+id=0
+bd=C://Kardex//Controle

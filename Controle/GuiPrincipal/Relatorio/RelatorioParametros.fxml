@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Relatorio.RelatorioParametrosController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <Button layoutX="438.6" layoutY="162.5" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+      <Button layoutX="13.4" layoutY="162.5" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+      <Label layoutX="13.4" layoutY="14.5" prefWidth="64.0" text="Emissao de:" />
+      <Label layoutX="13.4" layoutY="52.0" prefWidth="64.0" text="Vencimento" />
+      <Label layoutX="13.4" layoutY="89.5" prefWidth="64.0" text="Fornecedor:" />
+      <Label layoutX="13.4" layoutY="127.0" prefWidth="64.0" text="Valor:" />
+      <DatePicker fx:id="emissaoDe" layoutX="90.8" layoutY="12.5" />
+      <DatePicker fx:id="emissaoAte" layoutX="312.6" layoutY="12.5" />
+      <Label layoutX="278.2" layoutY="14.5" text="Ate:" />
+      <DatePicker fx:id="vencimentoDe" layoutX="90.8" layoutY="50.0" />
+      <DatePicker fx:id="vencimentoAte" layoutX="312.6" layoutY="50.0" />
+      <Label layoutX="278.2" layoutY="52.0" text="Ate:" />
+      <TextField fx:id="fornecedor" layoutX="90.8" layoutY="87.5" prefHeight="25.0" prefWidth="395.8" />
+      <TextField fx:id="valorDe" layoutX="90.8" layoutY="125.0" prefWidth="174.0" />
+      <Label layoutX="278.2" layoutY="127.0" text="Ate:" />
+      <TextField fx:id="valorAte" layoutX="312.6" layoutY="125.0" prefWidth="174.0" />
+      <CheckBox fx:id="classificada" allowIndeterminate="true" indeterminate="true" layoutX="214.0" layoutY="167.0" mnemonicParsing="false" text="Classificada" />
+   </children>
+</AnchorPane>

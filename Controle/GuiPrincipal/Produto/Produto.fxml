@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="825.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Produto.ProdutoController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+    <children>
+      <ComboBox fx:id="categoria" layoutX="22.0" layoutY="25.0" prefHeight="25.0" prefWidth="200.0" promptText="Buscar em..." />
+      <TextField fx:id="campo" layoutX="238.0" layoutY="25.0" prefHeight="25.0" prefWidth="492.0" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="95.0" />
+      <Button layoutX="754.0" layoutY="25.0" mnemonicParsing="false" onAction="#buscar" text="Buscar" AnchorPane.rightAnchor="20.0" />
+      <Button layoutX="22.0" layoutY="711.0" mnemonicParsing="false" onAction="#novoCadastro" text="Novo" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="22.0" />
+      <TableView fx:id="tabelaProduto" layoutX="21.0" layoutY="67.0" prefHeight="631.0" prefWidth="784.0" styleClass="tabela" stylesheets="@controle.css" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="67.0">
+        <columns>
+          <TableColumn fx:id="codigoProduto" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="descricaoProduto" prefWidth="123.0" text="Descrição" />
+            <TableColumn fx:id="complementoProduto" prefWidth="110.0" text="Complemento" />
+            <TableColumn fx:id="unidadeProduto" prefWidth="82.0" text="Unidade" />
+            <TableColumn fx:id="localizacaoProduto" prefWidth="99.0" text="Localizacao" />
+            <TableColumn fx:id="destinoProduto" prefWidth="88.0" text="Destino" />
+            <TableColumn fx:id="estoqueProduto" minWidth="3.0" prefWidth="98.0" text="Estoque" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

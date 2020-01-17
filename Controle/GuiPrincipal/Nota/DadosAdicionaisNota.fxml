@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="343.0" prefWidth="629.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Nota.DadosAdicionaisNotaController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="17.0" layoutY="14.0" prefHeight="17.0" prefWidth="506.0" text="Descrição:" />
+      <TextField fx:id="descricao" layoutX="16.0" layoutY="39.0" prefHeight="25.0" prefWidth="604.0" />
+      <Label layoutX="17.0" layoutY="74.0" prefHeight="17.0" prefWidth="506.0" text="Observação:" />
+      <TextArea fx:id="observacao" layoutX="16.0" layoutY="102.0" prefHeight="200.0" prefWidth="604.0" />
+      <Label fx:id="descricaoTamanho" layoutX="523.0" layoutY="14.0" prefHeight="17.0" prefWidth="96.0" text="Label" />
+      <Label fx:id="observacaoTamanho" layoutX="523.0" layoutY="74.0" prefHeight="17.0" prefWidth="96.0" text="Label" />
+      <Label layoutX="17.0" layoutY="312.0" prefHeight="17.0" prefWidth="74.0" text="Id PMWeb:" />
+      <TextField fx:id="pmweb" layoutX="91.0" layoutY="308.0" prefHeight="25.0" prefWidth="528.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Relatorio.RelatorioNotaController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <TabPane layoutX="52.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Tabela">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="509.0" layoutY="538.0" mnemonicParsing="false" onAction="#parametros" text="Parametros" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                        <TableView fx:id="nota" layoutX="14.0" layoutY="14.0" prefHeight="516.0" prefWidth="576.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                          <columns>
+                            <TableColumn fx:id="numero" prefWidth="150.0" text="Numero" />
+                              <TableColumn fx:id="serie" prefWidth="75.0" text="Serie" />
+                              <TableColumn fx:id="tipo" prefWidth="75.0" text="Tipo" />
+                            <TableColumn fx:id="fornecedor" prefWidth="230.0" text="Fornecedor" />
+                              <TableColumn fx:id="emissao" prefWidth="150.0" text="Emissao" />
+                              <TableColumn fx:id="vencimento" prefWidth="150.0" text="Vencimento" />
+                              <TableColumn fx:id="vencimentoReal" prefWidth="150.0" text="Vencimento Real" />
+                              <TableColumn fx:id="valor" prefWidth="150.0" text="Valor" />
+                              <TableColumn fx:id="aprovado" prefWidth="75.0" text="Status" />
+                              <TableColumn fx:id="classificada" prefWidth="150.0" text="Classificada" />
+                              <TableColumn fx:id="lancada" prefWidth="150.0" text="Lançada" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="14.0" layoutY="538.0" mnemonicParsing="false" onAction="#gerarRelatorio" text="Gerar" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+                        <Label fx:id="status" layoutX="172.0" layoutY="542.0" prefHeight="17.0" prefWidth="322.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="106.0" />
+                        <Button layoutX="69.0" layoutY="538.0" mnemonicParsing="false" onAction="#exportarNota" text="Exportar Notas" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="69.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Alterar">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="109.0" layoutY="141.0" mnemonicParsing="false" onAction="#alterarLote" text="Alterar" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                        <TableView fx:id="nota1" layoutX="14.0" layoutY="14.0" prefHeight="513.0" prefWidth="572.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <columns>
+                              <TableColumn fx:id="numero1" prefWidth="150.0" text="Numero" />
+                              <TableColumn fx:id="serie1" prefWidth="75.0" text="Serie" />
+                              <TableColumn fx:id="tipo1" prefWidth="75.0" text="Tipo" />
+                              <TableColumn fx:id="fornecedor1" prefWidth="230.0" text="Fornecedor" />
+                              <TableColumn fx:id="emissao1" prefWidth="150.0" text="Emissao" />
+                              <TableColumn fx:id="vencimento1" prefWidth="150.0" text="Vencimento" />
+                              <TableColumn fx:id="vencimentoReal1" prefWidth="150.0" text="Vencimento Real" />
+                              <TableColumn fx:id="valor1" prefWidth="150.0" text="Valor" />
+                              <TableColumn fx:id="classificada1" prefWidth="150.0" text="Classificada" />
+                              <TableColumn fx:id="lancada1" prefWidth="150.0" text="Lançada" />
+                           </columns>
+                        </TableView>
+                        <DatePicker fx:id="vencimentoAlterar" layoutX="14.0" layoutY="538.0" promptText="Vencimento" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+                        <CheckBox fx:id="classificarAlterar" allowIndeterminate="true" indeterminate="true" layoutX="211.0" layoutY="542.0" mnemonicParsing="false" text="Classificada" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="211.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Grafico">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <LineChart fx:id="grafico" alternativeColumnFillVisible="true" layoutX="50.0" layoutY="53.0" title="Resumo" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <xAxis>
+                            <CategoryAxis label="Vencimento" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="Valor" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

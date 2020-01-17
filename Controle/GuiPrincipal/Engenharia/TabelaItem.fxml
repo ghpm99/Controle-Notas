@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="553.0" prefWidth="799.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Engenharia.TabelaItemController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="itens" layoutX="14.0" layoutY="14.0" prefHeight="401.0" prefWidth="748.0" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0">
+        <columns>
+          <TableColumn fx:id="item" prefWidth="150.0" text="Item" />
+          <TableColumn fx:id="plano" prefWidth="150.0" text="Plano Conta" />
+            <TableColumn fx:id="descricao" prefWidth="300.0" text="Descricao" />
+            <TableColumn fx:id="unidade" prefWidth="75.0" text="Unidade" />
+            <TableColumn fx:id="qnt" prefWidth="150.0" text="Quantidade Total" />
+            <TableColumn fx:id="precoUnit" prefWidth="150.0" text="Preco unitario" />
+            <TableColumn fx:id="precoTotal" prefWidth="150.0" text="Preco Total" />
+        </columns>
+      </TableView>
+      <Button layoutX="710.0" layoutY="508.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="15.0" />
+      <TextField fx:id="itemNovo" layoutX="14.0" layoutY="464.0" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="planoNovo" layoutX="124.0" layoutY="464.0" prefWidth="100.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="124.0" />
+      <TextField fx:id="descricaoNovo" layoutX="232.0" layoutY="464.0" prefWidth="100.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="234.0" />
+      <TextField fx:id="unidadeNovo" layoutX="338.0" layoutY="464.0" prefWidth="100.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="344.0" />
+      <TextField fx:id="qntNovo" layoutX="445.0" layoutY="464.0" prefWidth="100.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="454.0" />
+      <TextField fx:id="precoUnitNovo" layoutX="552.0" layoutY="464.0" prefWidth="100.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="564.0" />
+      <TextField fx:id="precoTotalNovo" layoutX="674.0" layoutY="464.0" prefHeight="25.0" prefWidth="94.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="674.0" />
+      <Label layoutX="14.0" layoutY="434.0" text="Item" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="14.0" />
+      <Label layoutX="124.0" layoutY="434.0" text="Plano Conta" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="124.0" />
+      <Label layoutX="234.0" layoutY="434.0" text="Descricao" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="234.0" />
+      <Label layoutX="344.0" layoutY="434.0" text="Unidade" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="344.0" />
+      <Label layoutX="454.0" layoutY="434.0" text="Quantidade" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="454.0" />
+      <Label layoutX="564.0" layoutY="434.0" text="Preco Unit." AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="564.0" />
+      <Label layoutX="674.0" layoutY="434.0" text="Preco Total" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="674.0" />
+      <Button layoutX="14.0" layoutY="508.0" mnemonicParsing="false" onAction="#novo" text="Novo" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0" />
+      <Label fx:id="status" layoutX="124.0" layoutY="512.0" prefHeight="17.0" prefWidth="220.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="124.0" />
+   </children>
+</AnchorPane>

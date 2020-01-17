@@ -1,0 +1,45 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.scroll-bar:vertical {
+    -fx-opacity: 1;
+    -fx-padding:-7;
+}
+
+.table-view{
+    /*-fx-background-color: blue;*/
+    -fx-animated: true;
+}
+.celulaVermelha{
+    -fx-background-color: red;
+    -fx-focus-color: red ;
+}
+
+.table-row-cell:up 
+{
+    -fx-background-color: #007054; 
+}
+
+/*
+Pseudo class 'down' will change the row background 
+color to red when activated
+*/
+.table-row-cell:down {
+    -fx-background-color: #A30029;
+}
+
+.erro {
+  -fx-text-box-border: red ;
+  -fx-focus-color: red ;
+}
+.fundo{
+    -fx-background-image: url('Fundoazul.jpg');
+    
+    
+        
+}

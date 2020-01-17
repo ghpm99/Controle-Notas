@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="706.0" prefWidth="1166.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@controle.css" />
+   </stylesheets>
+   <children>
+      <MenuBar layoutY="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Detalhes">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#contabilidade" text="Contabilidade" />
+                  <MenuItem mnemonicParsing="false" onAction="#banco" text="Banco" />
+                  <MenuItem mnemonicParsing="false" onAction="#historico" text="Historico" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Notas">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#notas" text="Notas" />
+                  <MenuItem mnemonicParsing="false" onAction="#pagamentosAbertos" text="Pagamentos em aberto" />
+                  <MenuItem mnemonicParsing="false" onAction="#pagamentosBaixados" text="Pagamentos baixados" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Contratos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#contratos" text="Contratos" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="19.0" layoutY="44.0" prefWidth="265.25" text="Nome/Razão Social" />
+      <TextField fx:id="razaoSocialLabel" layoutX="19.0" layoutY="70.0" prefHeight="25.0" prefWidth="265.25" />
+      <Label layoutX="307.25" layoutY="44.0" prefWidth="265.25" text="Nome Fantasia" />
+      <TextField fx:id="nomeFantasiaLabel" layoutX="307.25" layoutY="69.0" prefWidth="265.25" />
+      <Label layoutX="593.5" layoutY="44.0" prefWidth="265.25" text="Sigla" />
+      <TextField fx:id="siglaLabel" layoutX="593.5" layoutY="69.0" prefWidth="265.25" />
+      <Label layoutX="879.75" layoutY="44.0" prefWidth="265.25" text="Tipo de empresa" />
+      <TextField fx:id="tipoEmpresaLabel" editable="false" layoutX="879.75" layoutY="71.0" prefWidth="265.25" />
+      <Label layoutX="19.0" layoutY="110.0" prefWidth="265.25" text="CNPJ" />
+      <TextField fx:id="cnpjLabel" layoutX="19.0" layoutY="138.0" prefHeight="25.0" prefWidth="265.25" text="99.999.999/9999-9" />
+      <Label layoutX="307.25" layoutY="110.0" prefWidth="265.25" text="Inscr. Estadual" />
+      <TextField fx:id="inscEstadualLabel" layoutX="307.25" layoutY="140.0" prefWidth="265.25" />
+      <Label layoutX="593.5" layoutY="110.0" prefWidth="265.25" text="Inscr. Municipal" />
+      <TextField fx:id="inscMunicipalLabel" layoutX="593.5" layoutY="140.0" prefWidth="265.25" />
+      <Label layoutX="879.75" layoutY="111.0" prefWidth="265.25" text="Natureza" />
+      <TextField fx:id="naturezaLabel" editable="false" layoutX="879.75" layoutY="139.0" prefWidth="265.25" />
+      <Label layoutX="19.0" layoutY="183.0" prefWidth="265.25" text="Data criação" />
+      <Label layoutX="307.25" layoutY="183.0" prefWidth="265.25" text="Codigo" />
+      <ToolBar layoutX="14.0" layoutY="254.0" prefHeight="40.0" prefWidth="796.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="254.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#incluirEndereço" text="Incluir" />
+            <Button mnemonicParsing="false" onAction="#removerEndereço" text="Remover" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="endereçoTableView" editable="true" layoutX="14.0" layoutY="294.0" prefHeight="164.0" prefWidth="796.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="294.0">
+        <columns>
+          <TableColumn fx:id="nomeEndereçoTableColumn" prefWidth="130.0" text="Nome ou descrição" />
+          <TableColumn fx:id="endereçoEndereçoTableColumn" prefWidth="100.0" text="Endereço " />
+            <TableColumn fx:id="codigoPostalEndereçoTableColumn" prefWidth="130.0" text="ZIP/codigo postal" />
+            <TableColumn fx:id="ruaEndereçoTableColumn" prefWidth="100.0" text="Rua " />
+            <TableColumn fx:id="numeroEndereçoTableColumn" prefWidth="100.0" text="Numero " />
+            <TableColumn fx:id="cidadeEndereçoTableColumn" prefWidth="100.0" text="Cidade " />
+            <TableColumn fx:id="distritoEndereçoTableColumn" prefWidth="100.0" text="Distrito " />
+            <TableColumn fx:id="estadoEndereçoTableColumn" prefWidth="100.0" text="Estado " />
+            <TableColumn fx:id="paisEndereçoTableColumn" prefWidth="100.0" text="Pais " />
+        </columns>
+      </TableView>
+      <ToolBar layoutX="14.0" layoutY="458.0" prefHeight="40.0" prefWidth="796.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="458.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#incluirContato" text="Incluir" />
+            <Button mnemonicParsing="false" onAction="#removerContato" text="Remover" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="contatoTableView" editable="true" layoutX="14.0" layoutY="494.0" prefHeight="164.0" prefWidth="1138.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="494.0">
+        <columns>
+          <TableColumn fx:id="descricaoContatoTableColumn" prefWidth="75.0" text="Descrição " />
+          <TableColumn fx:id="tipoContatoTableColumn" prefWidth="75.0" text="Tipo " />
+            <TableColumn fx:id="numeroContatoTableColumn" prefWidth="75.0" text="Numero de contado/Endereço" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="14.0" layoutY="668.0" mnemonicParsing="false" onAction="#voltar" text="Cancelar" AnchorPane.bottomAnchor="13.0" />
+      <Label fx:id="status" layoutX="87.0" layoutY="716.0" prefHeight="17.0" prefWidth="624.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="114.0" />
+      <Label fx:id="dataCriacaoLabel" layoutX="19.0" layoutY="214.0" prefWidth="265.25" text="Label" />
+      <Label fx:id="codigoLabel" layoutX="307.25" layoutY="214.0" prefWidth="265.25" text="Label" />
+   </children>
+</AnchorPane>

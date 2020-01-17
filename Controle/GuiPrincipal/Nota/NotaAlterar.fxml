@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="706.0" minWidth="1166.0" prefHeight="706.0" prefWidth="1166.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+
+   <stylesheets>
+      <URL value="@controle.css" />
+   </stylesheets>
+   <children>
+      <Label layoutX="17.0" layoutY="14.0" prefHeight="17.0" prefWidth="74.0" text="Numero" AnchorPane.leftAnchor="17.0" />
+      <TextField fx:id="numero" editable="false" layoutX="17.0" layoutY="39.0" prefHeight="25.0" prefWidth="74.0" text="000000000" AnchorPane.leftAnchor="17.0" />
+      <TextField fx:id="serie" editable="false" layoutX="106.0" layoutY="39.0" prefHeight="25.0" prefWidth="35.0" text="000" />
+      <TextField fx:id="fornecedor" editable="false" layoutX="156.0" layoutY="39.0" prefHeight="25.0" prefWidth="300.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" AnchorPane.leftAnchor="156.0" />
+      <TextField fx:id="faturamentoDireto" editable="false" layoutX="466.0" layoutY="39.0" prefHeight="25.0" prefWidth="300.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
+      <ChoiceBox fx:id="tipo" layoutX="778.0" layoutY="39.0" prefHeight="25.0" prefWidth="106.0" />
+      <DatePicker fx:id="emissao" editable="false" layoutX="17.0" layoutY="109.0" prefHeight="25.0" prefWidth="106.0" promptText="00/00/0000" AnchorPane.leftAnchor="17.0" />
+      <DatePicker fx:id="vencimento" editable="false" layoutX="141.0" layoutY="109.0" prefHeight="25.0" prefWidth="106.0" promptText="00/00/0000" AnchorPane.leftAnchor="141.0" />
+      <DatePicker fx:id="vencimentoReal" editable="false" layoutX="262.0" layoutY="109.0" prefHeight="25.0" prefWidth="106.0" promptText="00/00/0000" />
+      <TextField fx:id="prazo" layoutX="385.0" layoutY="109.0" prefHeight="25.0" prefWidth="28.0" promptText="Dias" text="00" />
+      <TextField fx:id="saldoContrato" editable="false" layoutX="433.0" layoutY="109.0" prefHeight="25.0" prefWidth="112.0" text="R$ 000.000.000,00" AnchorPane.leftAnchor="433.0" />
+      <TextField fx:id="faturaAtual" editable="false" layoutX="560.0" layoutY="109.0" prefHeight="25.0" prefWidth="112.0" text="R$ 000.000.000,00" AnchorPane.leftAnchor="560.0" />
+      <TextField fx:id="saldoFaturar" editable="false" layoutX="684.0" layoutY="109.0" prefHeight="25.0" prefWidth="112.0" text="R$ 000.000.000,00" AnchorPane.leftAnchor="684.0" />
+      <Label layoutX="17.0" layoutY="84.0" prefHeight="17.0" prefWidth="106.0" text="Emissão" AnchorPane.leftAnchor="17.0" />
+      <Label layoutX="156.0" layoutY="14.0" prefHeight="17.0" prefWidth="300.0" text="Fornecedor" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="710.0" />
+      <Label layoutX="141.0" layoutY="84.0" prefHeight="17.0" prefWidth="106.0" text="Vencimento" AnchorPane.leftAnchor="141.0" />
+      <Label layoutX="466.0" layoutY="14.0" prefHeight="17.0" prefWidth="300.0" text="Fornecedor Contrato" AnchorPane.leftAnchor="466.0" AnchorPane.rightAnchor="400.0" />
+      <ToolBar layoutX="14.0" layoutY="206.0" prefHeight="40.0" prefWidth="805.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0">
+         <items>
+            <Button fx:id="estornarButton" mnemonicParsing="false" onAction="#estornar" text="Incluir Item" />
+            <Button mnemonicParsing="false" onAction="#dadosAdicionais" text="Duplicar Item" />
+            <Button onAction="#imprimir" text="Excluir Item" />
+         </items>
+      </ToolBar>
+      <Label fx:id="status" layoutX="91.0" layoutY="653.0" prefHeight="17.0" prefWidth="326.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="419.0" />
+      <Label fx:id="statusNota" layoutX="756.0" layoutY="653.0" prefHeight="17.0" prefWidth="173.0" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="237.0" />
+      <Label layoutX="433.0" layoutY="84.0" prefHeight="17.0" prefWidth="112.0" text="Saldo Contrato" />
+      <Label layoutX="560.0" layoutY="84.0" prefHeight="17.0" prefWidth="112.0" text="Fatura Atual" />
+      <Label layoutX="684.0" layoutY="84.0" prefHeight="17.0" prefWidth="112.0" text="Saldo a Faturar" />
+      <Label layoutX="778.0" layoutY="14.0" prefHeight="17.0" prefWidth="35.0" text="Tipo" />
+      <Label layoutX="106.0" layoutY="14.0" prefHeight="17.0" prefWidth="35.0" text="Serie" />
+      <Label layoutX="262.0" layoutY="84.0" prefHeight="17.0" prefWidth="106.0" text="Vencimento Real" />
+      <Label fx:id="rodape" layoutX="16.0" layoutY="684.0" prefHeight="17.0" prefWidth="1135.0" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.0" />
+      <Label layoutX="385.0" layoutY="84.0" prefHeight="17.0" prefWidth="35.0" text="Prazo" />
+      <TabPane layoutX="14.0" layoutY="246.0" prefHeight="395.0" prefWidth="1135.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="246.0">
+        <tabs>
+          <Tab text="Valores">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="valores" editable="true" prefHeight="0.0" prefWidth="1104.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="itemValores" prefWidth="150.0" text="Item" />
+                              <TableColumn fx:id="planoValores" prefWidth="150.0" text="Plano de contas" />
+                              <TableColumn fx:id="precoUnidValores" prefWidth="100.0" text="Preco Unid." />
+                              <TableColumn fx:id="qntValores" prefWidth="100.0" text="Quantidade" />
+                              <TableColumn fx:id="totalValores" prefWidth="100.0" text="Total" />
+                              <TableColumn fx:id="unidValores" prefWidth="150.0" text="Unidade" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Anexos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="anexos" layoutX="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="nomeAnexos" prefWidth="75.0" text="Nome" />
+                            <TableColumn fx:id="arquivoAnexos" prefWidth="75.0" text="Arquivo" />
+                              <TableColumn fx:id="tipoAnexos" prefWidth="75.0" text="Tipo" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Pagamento">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="pagamentos" editable="true" layoutX="191.0" layoutY="38.0" prefHeight="328.0" prefWidth="1135.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="dataVencimentoPagamentos" prefWidth="150.0" text="Data Vencimento" />
+                            <TableColumn fx:id="dataPagamentoPagamentos" prefWidth="150.0" text="Data Pagamento" />
+                              <TableColumn fx:id="valorPagamentos" prefWidth="150.0" text="Valor" />
+                              <TableColumn fx:id="tipoPagamentos" prefWidth="150.0" text="Tipo de Pagamento" />
+                              <TableColumn fx:id="linhaDigitavelPagamentos" prefWidth="150.0" text="Linha digitavel" />
+                              <TableColumn fx:id="codigoBarrasPagamentos" prefWidth="150.0" text="Codigo de barras" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="17.0" layoutY="149.0" prefHeight="17.0" prefWidth="106.0" text="ISSQN" />
+      <TextField fx:id="issqn" editable="false" layoutX="17.0" layoutY="174.0" prefHeight="25.0" prefWidth="106.0" text="R$ 000.000.000,00" />
+      <Label layoutX="141.0" layoutY="149.0" prefHeight="17.0" prefWidth="106.0" text="CSRF" />
+      <TextField fx:id="csrf" editable="false" layoutX="141.0" layoutY="174.0" prefHeight="25.0" prefWidth="106.0" text="R$ 000.000.000,00" />
+      <Label layoutX="262.0" layoutY="149.0" prefHeight="17.0" prefWidth="106.0" text="INSS" />
+      <TextField fx:id="inss" editable="false" layoutX="262.0" layoutY="174.0" prefHeight="25.0" prefWidth="106.0" text="R$ 000.000.000,00" />
+      <Label layoutX="380.0" layoutY="149.0" prefHeight="17.0" prefWidth="106.0" text="IRRF" />
+      <TextField fx:id="irrf" editable="false" layoutX="380.0" layoutY="174.0" prefHeight="25.0" prefWidth="106.0" text="R$ 000.000.000,00" />
+      <Label layoutX="497.0" layoutY="149.0" prefHeight="17.0" prefWidth="106.0" text="Valor Impostos" />
+      <TextField fx:id="valorImpostos" editable="false" layoutX="497.0" layoutY="174.0" prefHeight="25.0" prefWidth="106.0" text="R$ 000.000.000,00" />
+      <Label layoutX="611.0" layoutY="149.0" prefHeight="17.0" prefWidth="106.0" text="Valor Liquido" />
+      <TextField fx:id="valorLiquido" editable="false" layoutX="611.0" layoutY="174.0" prefHeight="25.0" prefWidth="106.0" text="R$ 000.000.000,00" />
+      <MenuButton layoutX="1050.0" layoutY="658.0" mnemonicParsing="false" text="Ações" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="17.0">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#estornar" text="Lançar/Estonar">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+            </MenuItem>
+          <MenuItem mnemonicParsing="false" onAction="#dadosAdicionais" text="Dados Adicionais" />
+            <MenuItem mnemonicParsing="false" onAction="#imprimir" text="Imprimir" />
+            <MenuItem mnemonicParsing="false" onAction="#ratear" text="Ratear" />
+            <MenuItem mnemonicParsing="false" onAction="#novo" text="Novo" />
+            <MenuItem mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+            <MenuItem mnemonicParsing="false" onAction="#historico" text="Historico" />
+            <MenuItem mnemonicParsing="false" onAction="#anexar" text="Incluir Anexo" />
+            <MenuItem mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>

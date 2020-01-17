@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="706.0" minWidth="1166.0" prefHeight="706.0" prefWidth="1166.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="17.0" layoutY="14.0" prefHeight="17.0" prefWidth="150.0" text="Numero" AnchorPane.leftAnchor="17.0" />
+      <TextField fx:id="numero" layoutX="17.0" layoutY="39.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="17.0" />
+      <DatePicker fx:id="emissao" layoutX="184.0" layoutY="39.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="184.0" />
+      <TextField fx:id="autor" editable="false" layoutX="345.0" layoutY="39.0" />
+      <TextField fx:id="contratoCampo" editable="false" layoutX="502.0" layoutY="39.0" />
+      <TextField fx:id="total" editable="false" layoutX="668.0" layoutY="39.0" />
+      <Label layoutX="184.0" layoutY="14.0" prefHeight="17.0" prefWidth="150.0" text="Emissão" AnchorPane.leftAnchor="184.0" />
+      <TextField fx:id="fornecedor" layoutX="17.0" layoutY="107.0" prefHeight="25.0" prefWidth="318.0" />
+      <TextField fx:id="descricao" layoutX="345.0" layoutY="107.0" prefHeight="25.0" prefWidth="304.0" />
+      <TextField fx:id="gasto" editable="false" layoutX="839.0" layoutY="39.0" />
+      <ToolBar layoutX="14.0" layoutY="157.0" prefHeight="40.0" prefWidth="805.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#adicionarItem" text="Adicionar" />
+            <Button mnemonicParsing="false" onAction="#duplicarItem" text="Duplicar" />
+            <Button mnemonicParsing="false" onAction="#removerItem" text="Remover" />
+            <Button mnemonicParsing="false" onAction="#limparItens" text="Limpar" />
+         </items>
+      </ToolBar>
+      <TableView fx:id="item" editable="true" layoutX="14.0" layoutY="197.0" prefHeight="177.0" prefWidth="805.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="296.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="197.0" VBox.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="itemOrcamentoItem" prefWidth="150.0" text="Item de Orçamento" />
+            <TableColumn fx:id="planoContaItem" prefWidth="150.0" text="Plano de contas" />
+            <TableColumn fx:id="descricaoItem" prefWidth="150.0" text="Descriçao" />
+            <TableColumn fx:id="unidadeItem" prefWidth="150.0" text="Unidade" />
+            <TableColumn fx:id="quantidadeOrcadaItem" prefWidth="150.0" text="Quant. Orçada" />
+            <TableColumn fx:id="valorOrcadoUnidadeItem" prefWidth="150.0" text="Valor Orçado Unit" />
+            <TableColumn fx:id="valorOrcadoTotalItem" prefWidth="150.0" text="Valor Orçado Total" />
+            <TableColumn fx:id="quantidadeItem" prefWidth="75.0" text="Quant." />
+            <TableColumn fx:id="valorUnidadeItem" prefWidth="75.0" text="Valor Unit" />
+            <TableColumn fx:id="valorTotalItem" prefWidth="150.0" text="Valor Total" />
+            <TableColumn fx:id="tipoItem" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="custoItem" prefWidth="75.0" text="Custo" />
+         </columns>
+      </TableView>
+      <Button layoutX="695.0" layoutY="631.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="93.0" />
+      <Button layoutX="17.0" layoutY="631.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="17.0" />
+      <Label fx:id="status" layoutX="92.0" layoutY="635.0" prefHeight="17.0" prefWidth="506.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="238.0" />
+      <Label layoutX="17.0" layoutY="78.0" text="Fornecedor" />
+      <Label layoutX="345.0" layoutY="14.0" prefHeight="17.0" prefWidth="149.0" text="Responsavel" />
+      <Label layoutX="345.0" layoutY="78.0" prefHeight="17.0" prefWidth="304.0" text="Descrição" />
+      <Label layoutX="502.0" layoutY="14.0" prefHeight="17.0" prefWidth="149.0" text="Contrato" />
+      <TableView fx:id="produto" editable="true" layoutX="17.0" layoutY="416.0" prefHeight="200.0" prefWidth="805.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="14.0">
+        <columns>
+          <TableColumn fx:id="codigoProduto" prefWidth="75.0" text="Codigo do produto" />
+          <TableColumn fx:id="descricaoProduto" prefWidth="75.0" text="Descrição" />
+            <TableColumn fx:id="unidadeProduto" prefWidth="75.0" text="Unidade" />
+            <TableColumn fx:id="quantidadeProduto" prefWidth="75.0" text="Quantidade" />
+            <TableColumn fx:id="menorUnidadeProduto" prefWidth="75.0" text="Menor Preço Unit" />
+            <TableColumn fx:id="menorPrecoTotalProduto" prefWidth="75.0" text="Menor Preço Total" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ToolBar layoutX="17.0" layoutY="376.0" prefHeight="40.0" prefWidth="805.0" AnchorPane.bottomAnchor="254.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="14.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#adicionarProduto" text="Adicionar" />
+            <Button mnemonicParsing="false" onAction="#duplicarProduto" text="Duplicar" />
+            <Button mnemonicParsing="false" onAction="#removerProduto" text="Remover" />
+            <Button mnemonicParsing="false" onAction="#limparProdutos" text="Limpar" />
+         </items>
+      </ToolBar>
+      <Label layoutX="670.0" layoutY="14.0" prefHeight="17.0" prefWidth="149.0" text="Total" />
+      <Label layoutX="839.0" layoutY="14.0" prefHeight="17.0" prefWidth="149.0" text="Gasto" />
+      <MenuButton layoutX="758.0" layoutY="631.0" mnemonicParsing="false" text="Ações" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#dadosAdicionais" text="Dados adicionais" />
+        </items>
+      </MenuButton>
+   </children>
+   <stylesheets>
+      <URL value="@controle.css" />
+   </stylesheets>
+</AnchorPane>

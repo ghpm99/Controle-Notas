@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="fundo" onKeyPressed="#logarKey" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.LogarFxController">
+   <children>
+      <Pane layoutX="325.0" layoutY="158.0" opacity="0.67" prefHeight="236.0" prefWidth="311.0" style="-fx-background-color: black;">
+         <effect>
+            <Reflection fraction="0.3" topOffset="10.0" topOpacity="0.82" />
+         </effect>
+      </Pane>
+      <Label layoutX="249.0" layoutY="204.0" prefHeight="17.0" prefWidth="44.0" text="Login:" textFill="WHITE" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="204.0" />
+      <Label layoutX="242.0" layoutY="254.0" prefHeight="17.0" prefWidth="44.0" text="Senha:" textFill="WHITE" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="254.0" />
+      <Label fx:id="status" layoutX="406.0" layoutY="426.0" prefHeight="50.0" prefWidth="150.0" textFill="RED" AnchorPane.leftAnchor="406.0" AnchorPane.topAnchor="340.0" />
+      <TextField fx:id="login" layoutX="470.0" layoutY="100.0" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="200.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="10.0" offsetY="5.0" radius="4.5" width="10.0" />
+         </effect>
+      </TextField>
+      <PasswordField fx:id="senha" layoutX="675.0" layoutY="246.0" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="250.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="11.0" offsetY="5.0" radius="5.0" width="11.0" />
+         </effect>
+      </PasswordField>
+      <ChoiceBox fx:id="banco" layoutX="392.0" layoutY="403.0" prefWidth="150.0" AnchorPane.leftAnchor="405.0" AnchorPane.topAnchor="310.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="11.0" offsetY="5.0" radius="5.0" width="11.0" />
+         </effect>
+      </ChoiceBox>
+      <Button layoutX="589.0" layoutY="425.0" mnemonicParsing="false" onAction="#logar" text="Logar" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="360.0" />
+      <Button layoutX="325.0" layoutY="425.0" mnemonicParsing="false" onMouseClicked="#cancelar" text="Cancelar" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="360.0" />
+      <Label fx:id="sobre" alignment="CENTER" contentDisplay="CENTER" layoutX="264.0" layoutY="404.0" prefHeight="122.0" prefWidth="433.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+      <Label fx:id="conexao" alignment="CENTER" contentDisplay="CENTER" layoutX="376.0" layoutY="166.0" prefHeight="17.0" prefWidth="203.0" text="Label" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+   </children>
+</AnchorPane>

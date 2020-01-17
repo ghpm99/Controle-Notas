@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="825.0" styleClass="mainFxmlClass" stylesheets="@../controle.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="28.0" prefHeight="17.0" prefWidth="106.0" text="Codigo" AnchorPane.leftAnchor="14.0" />
+      <Label layoutX="133.0" layoutY="28.0" prefHeight="17.0" prefWidth="270.0" text="Descrição" AnchorPane.leftAnchor="133.0" />
+      <TextField fx:id="codigo" layoutX="23.0" layoutY="58.0" prefHeight="25.0" prefWidth="106.0" text="XXXXXXXXXXXX" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="descricao" layoutX="133.0" layoutY="58.0" prefHeight="25.0" prefWidth="270.0" AnchorPane.leftAnchor="133.0" />
+      <Label layoutX="413.0" layoutY="28.0" prefHeight="17.0" prefWidth="270.0" text="Complemento" AnchorPane.leftAnchor="413.0" />
+      <Label layoutX="14.0" layoutY="96.0" prefHeight="17.0" prefWidth="270.0" text="Localização" AnchorPane.leftAnchor="14.0" />
+      <Label layoutX="293.0" layoutY="96.0" prefHeight="17.0" prefWidth="270.0" text="Destino" AnchorPane.leftAnchor="293.0" />
+      <Label layoutX="14.0" layoutY="159.0" prefHeight="17.0" prefWidth="149.0" text="Unidade" AnchorPane.leftAnchor="14.0" />
+      <Label layoutX="144.0" layoutY="159.0" prefHeight="17.0" prefWidth="149.0" text="Estoque" AnchorPane.leftAnchor="144.0" />
+      <TextField fx:id="complemento" layoutX="413.0" layoutY="58.0" prefHeight="25.0" prefWidth="270.0" AnchorPane.leftAnchor="413.0" />
+      <TextField fx:id="localizacao" layoutX="14.0" layoutY="121.0" prefHeight="25.0" prefWidth="270.0" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="destino" layoutX="293.0" layoutY="121.0" prefHeight="25.0" prefWidth="270.0" AnchorPane.leftAnchor="293.0" />
+      <TextField fx:id="unidade" layoutX="109.0" layoutY="181.0" prefHeight="25.0" prefWidth="119.0" text="XXXXXXXXXXXXXX" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="estoque" editable="false" layoutX="144.0" layoutY="181.0" AnchorPane.leftAnchor="144.0" />
+      <MenuButton layoutX="747.0" layoutY="712.0" mnemonicParsing="false" text="Ações" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="14.0">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Historico" />
+          <MenuItem mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>

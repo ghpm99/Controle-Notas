@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="745.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Financeiro.IncluirPagamentoController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="24.0" layoutY="26.0" prefHeight="17.0" prefWidth="61.0" text="Cnpj/Cpf:" />
+      <TextField fx:id="cnpjField" layoutX="100.0" layoutY="22.0" prefHeight="25.0" prefWidth="232.0" />
+      <Button layoutX="669.0" layoutY="22.0" mnemonicParsing="false" onAction="#buscarCnpj" text="Buscar" />
+      <TableView fx:id="notasAbertoTabela" layoutX="24.0" layoutY="181.0" prefHeight="320.0" prefWidth="698.0">
+         <columns>
+            <TableColumn fx:id="diarioNota" prefWidth="75.0" text="Diario" />
+            <TableColumn fx:id="numeroNota" text="Numero" />
+            <TableColumn fx:id="fornecedorNota" prefWidth="230.0" text="Fornecedor" />
+            <TableColumn fx:id="cnpjNota" prefWidth="130.0" text="CNPJ" />
+            <TableColumn fx:id="vencimentoNota" prefWidth="130.0" text="Vencimento" />
+            <TableColumn fx:id="vencimentoRealNota" prefWidth="130.0" text="Vencimento Real" />
+            <TableColumn fx:id="valorNota" prefWidth="100.0" text="Valor" />
+            <TableColumn fx:id="descontoNota" prefWidth="100.0" text="Desconto" />
+            <TableColumn fx:id="jurosNota" prefWidth="100.0" text="Juros" />
+            <TableColumn fx:id="valorLiquidoNota" prefWidth="100.0" text="Valor Liquido" />
+            <TableColumn fx:id="tipoNota" prefWidth="100.0" text="Tipo" />
+            <TableColumn fx:id="baixadaNota" prefWidth="60.0" text="Baixada" />
+            <TableColumn fx:id="linhaNota" prefWidth="230.0" text="Linha" />
+            <TableColumn fx:id="codigoNota" prefWidth="230.0" text="Codigo" />
+         </columns>
+      </TableView>
+      <TableView fx:id="fornecedores" layoutX="24.0" layoutY="62.0" prefHeight="108.0" prefWidth="698.0">
+         <columns>
+            <TableColumn fx:id="cnpj" prefWidth="200.0" text="CNPJ" />
+            <TableColumn fx:id="nome" prefWidth="375.0" text="Nome" />
+         </columns>
+      </TableView>
+      <Button layoutX="679.0" layoutY="510.0" mnemonicParsing="false" onAction="#incluirPagamento" text="Incluir" />
+   </children>
+</AnchorPane>

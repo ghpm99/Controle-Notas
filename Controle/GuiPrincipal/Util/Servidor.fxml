@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="626.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Util.ServidorController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <TextArea fx:id="campo" editable="false" layoutX="27.0" layoutY="21.0" prefHeight="513.0" prefWidth="572.0" scrollLeft="3.0" scrollTop="3.0" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="27.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="706.0" prefWidth="1166.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Financeiro.MostrarPagamentosController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="notasFinanceiro" prefHeight="603.0" prefWidth="1138.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="diarioNota" prefWidth="75.0" text="Diario" />
+            <TableColumn fx:id="numeroNota" text="Numero" />
+            <TableColumn fx:id="fornecedorNota" prefWidth="230.0" text="Fornecedor" />
+            <TableColumn fx:id="cnpjNota" prefWidth="130.0" text="CNPJ" />
+            <TableColumn fx:id="vencimentoNota" prefWidth="130.0" text="Vencimento" />
+            <TableColumn fx:id="vencimentoRealNota" prefWidth="130.0" text="Vencimento Real" />
+            <TableColumn fx:id="valorNota" prefWidth="100.0" text="Valor" />
+            <TableColumn fx:id="descontoNota" prefWidth="100.0" text="Desconto" />
+            <TableColumn fx:id="jurosNota" prefWidth="100.0" text="Juros" />
+            <TableColumn fx:id="valorLiquidoNota" prefWidth="100.0" text="Valor Liquido" />
+            <TableColumn fx:id="tipoNota" prefWidth="100.0" text="Tipo" />
+            <TableColumn fx:id="baixadaNota" prefWidth="60.0" text="Baixada" />
+            <TableColumn fx:id="linhaNota" prefWidth="230.0" text="Linha" />
+            <TableColumn fx:id="codigoNota" prefWidth="230.0" text="Codigo" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

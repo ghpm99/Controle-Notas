@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="556.0" prefWidth="661.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="GuiPrincipal.Util.SobreController">
+    <stylesheets>
+        <URL value="@/GuiPrincipal/controle.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="iconeImage" fitHeight="167.0" fitWidth="222.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <Label fx:id="versaoLabel" layoutX="236.0" layoutY="14.0" prefHeight="167.0" prefWidth="412.0" text="Label" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0" />
+   </children>
+</AnchorPane>

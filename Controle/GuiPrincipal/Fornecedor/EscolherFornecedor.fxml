@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Fornecedor.EscolherFornecedorController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <ChoiceBox fx:id="campos" layoutX="14.0" layoutY="14.0" prefWidth="150.0" />
+      <TextField fx:id="campo" layoutX="194.0" layoutY="14.0" onKeyPressed="#buscarEnter" prefHeight="25.0" prefWidth="324.0" />
+      <Button layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#buscar" text="Buscar" />
+      <TableView fx:id="fornecedores" layoutX="14.0" layoutY="47.0" prefHeight="305.0" prefWidth="574.0">
+        <columns>
+          <TableColumn fx:id="cnpj" prefWidth="200.0" text="CNPJ" />
+          <TableColumn fx:id="nome" prefWidth="375.0" text="Nome" />
+        </columns>
+      </TableView>
+      <Button fx:id="cancelar" layoutX="14.0" layoutY="363.0" mnemonicParsing="false" text="Cancelar" />
+   </children>
+</AnchorPane>

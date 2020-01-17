@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="670.0" prefWidth="836.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Contrato.OrdemCompraCadastroController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Numero" />
+      <TextField layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="190.0" layoutY="14.0" text="Emissão" />
+      <TextField layoutX="190.0" layoutY="39.0" prefHeight="25.0" prefWidth="190.0" />
+      <Label layoutX="396.0" layoutY="14.0" text="Contratante" />
+      <TextField layoutX="397.0" layoutY="39.0" prefHeight="25.0" prefWidth="420.0" />
+      <Label layoutX="14.0" layoutY="83.0" text="Comprador" />
+      <TextField layoutX="14.0" layoutY="115.0" />
+      <Label layoutX="190.0" layoutY="83.0" text="E-mail" />
+      <TextField layoutX="190.0" layoutY="115.0" prefHeight="25.0" prefWidth="190.0" />
+      <Label layoutX="397.0" layoutY="83.0" text="Fornecedor" />
+      <TextField layoutX="397.0" layoutY="115.0" prefHeight="25.0" prefWidth="420.0" />
+      <ToolBar layoutX="14.0" layoutY="157.0" prefHeight="40.0" prefWidth="805.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0">
+        <items>
+          <Button mnemonicParsing="false" text="Adicionar" />
+            <Button mnemonicParsing="false" text="Duplicar" />
+            <Button mnemonicParsing="false" text="Alterar" />
+            <Button mnemonicParsing="false" text="Remover" />
+        </items>
+      </ToolBar>
+      <HBox layoutX="14.0" layoutY="197.0" prefHeight="224.0" prefWidth="805.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0">
+         <children>
+            <TableView fx:id="produtos" editable="true" prefHeight="229.0" prefWidth="805.0" tableMenuButtonVisible="true" HBox.hgrow="ALWAYS">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Item" />
+                <TableColumn prefWidth="75.0" text="Codigo" />
+                  <TableColumn prefWidth="128.0" text="Descrição" />
+                  <TableColumn prefWidth="102.0" text="Quantidade" />
+                  <TableColumn prefWidth="87.0" text="Unidade" />
+                  <TableColumn prefWidth="95.0" text="Valor Unitário" />
+                  <TableColumn prefWidth="77.0" text="Ipi" />
+                  <TableColumn prefWidth="54.0" text="Frete" />
+                  <TableColumn prefWidth="54.0" text="Icms" />
+                  <TableColumn prefWidth="66.0" text="Desconto" />
+                  <TableColumn minWidth="8.0" prefWidth="8.0" text="Valor Total" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <Label layoutX="14.0" layoutY="441.0" text="Label" />
+   </children>
+</AnchorPane>

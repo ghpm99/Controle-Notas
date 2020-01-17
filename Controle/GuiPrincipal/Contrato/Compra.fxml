@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Contrato.CompraController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="369.0" text="Modulo de compra, selecione algum sub-item abaixo" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+   </children>
+</AnchorPane>

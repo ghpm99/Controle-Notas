@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane stylesheets="@../controle.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+            <Label layoutX="17.0" layoutY="14.0" prefHeight="17.0" prefWidth="150.0" text="Numero" AnchorPane.leftAnchor="17.0" />
+            <TextField fx:id="numero" editable="false" layoutX="17.0" layoutY="39.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="17.0" />
+            <DatePicker fx:id="emissao" editable="false" layoutX="184.0" layoutY="39.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="184.0" />
+            <TextField fx:id="responsavel" editable="false" layoutX="345.0" layoutY="39.0" />
+            <TextField fx:id="total" editable="false" layoutX="502.0" layoutY="39.0" />
+            <TextField fx:id="gasto" editable="false" layoutX="668.0" layoutY="39.0" />
+            <Label layoutX="184.0" layoutY="14.0" prefHeight="17.0" prefWidth="150.0" text="Emissão" AnchorPane.leftAnchor="184.0" />
+            <TextField fx:id="fornecedor" editable="false" layoutX="17.0" layoutY="107.0" prefHeight="25.0" prefWidth="318.0" />
+            <TextField fx:id="descricao" editable="false" layoutX="345.0" layoutY="107.0" prefHeight="25.0" prefWidth="304.0" />
+            <TextField fx:id="saldo" editable="false" layoutX="668.0" layoutY="107.0" />
+            <TableView fx:id="itens" layoutX="14.0" layoutY="162.0" prefHeight="458.0" prefWidth="805.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="162.0">
+                <columns>
+                    <TableColumn fx:id="item" prefWidth="150.0" text="Item de Orçamento" />
+                    <TableColumn fx:id="planoItem" prefWidth="150.0" text="Plano de contas" />
+                    <TableColumn fx:id="descricaoItem" prefWidth="150.0" text="Descriçao" />
+                    <TableColumn fx:id="tipoItem" prefWidth="150.0" text="Tipo" />
+                    <TableColumn fx:id="custoItem" prefWidth="150.0" text="Custo" />
+                    <TableColumn fx:id="numeroMapa" prefWidth="150.0" text="Mapa" />
+                    <TableColumn fx:id="descricaoMapa" prefWidth="150.0" text="Descricao" />
+                    <TableColumn fx:id="valorTotal" prefWidth="75.0" text="Valor" />
+                    <TableColumn fx:id="gastoItem" prefWidth="150.0" text="Gasto" />
+                    <TableColumn fx:id="saldoItem" prefWidth="150.0" text="Saldo" />
+                </columns>
+            </TableView>
+            <Label fx:id="status" layoutX="17.0" layoutY="635.0" prefHeight="17.0" prefWidth="647.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="172.0" />
+            <Label layoutX="17.0" layoutY="78.0" text="Fornecedor" />
+            <Label layoutX="345.0" layoutY="14.0" text="Responsavel" />
+            <Label layoutX="345.0" layoutY="78.0" text="Descrição" />
+            <Label layoutX="502.0" layoutY="14.0" text="Total" />
+            <Label layoutX="670.0" layoutY="14.0" text="Gasto" />
+            <Label layoutX="668.0" layoutY="78.0" text="Saldo" />
+            <MenuButton layoutX="753.0" layoutY="631.0" mnemonicParsing="false" text="Ações relacionadas" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="19.0">
+                <items>
+            <MenuItem mnemonicParsing="false" onAction="#historico" text="Historico" />
+                    <MenuItem mnemonicParsing="false" onAction="#imprimir" text="Imprimir" />
+                    <MenuItem mnemonicParsing="false" onAction="#consultarMapa" text="Consultar Mapa" />
+                    <MenuItem mnemonicParsing="false" onAction="#incluirMapa" text="Incluir Mapa" />
+                    <MenuItem mnemonicParsing="false" onAction="#incluirPreNota" text="Incluir Pre-Nota" />
+                    <MenuItem mnemonicParsing="false" onAction="#cancelarContrato" text="Cancelar Contrato" />
+            <MenuItem mnemonicParsing="false" onAction="#cancelar" text="Voltar" />
+                </items>
+            </MenuButton>
+   </children>
+</AnchorPane>

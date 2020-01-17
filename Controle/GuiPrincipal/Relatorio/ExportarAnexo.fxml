@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="422.0" prefWidth="368.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Relatorio.ExportarAnexoController">
+    <stylesheets>
+        <URL value="@/GuiPrincipal/controle.css" />
+    </stylesheets>
+   <children>
+      <Button layoutX="296.0" layoutY="381.0" mnemonicParsing="false" onAction="#exportarButton" text="Exportar" />
+      <Button layoutX="11.0" layoutY="381.0" mnemonicParsing="false" onAction="#cancelarButton" text="Cancelar" />
+      <Accordion layoutY="7.0" prefHeight="366.0" prefWidth="368.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <panes>
+          <TitledPane text="Tipo Nota">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="18.0" layoutY="14.0" text="Saida" />
+                        <Label layoutX="236.0" layoutY="14.0" text="Tipos" />
+                        <ListView fx:id="saidaNota" layoutX="18.0" layoutY="43.0" prefHeight="239.0" prefWidth="120.0" />
+                        <ListView fx:id="tiposNota" layoutX="236.0" layoutY="43.0" prefHeight="239.0" prefWidth="120.0" />
+                        <Button layoutX="150.0" layoutY="128.0" mnemonicParsing="false" onAction="#adicionarTipoNota" text="Adicionar" />
+                        <Button layoutX="151.0" layoutY="173.0" mnemonicParsing="false" onAction="#RemoverTipoNota" text="Remover" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane text="Tipo Anexo">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="15.0" layoutY="14.0" text="Saida" />
+                        <Label layoutX="232.0" layoutY="14.0" text="Tipos" />
+                        <ListView fx:id="saidaAnexos" layoutX="15.0" layoutY="40.0" prefHeight="239.0" prefWidth="120.0" />
+                        <ListView fx:id="tiposAnexo" layoutX="232.0" layoutY="40.0" prefHeight="239.0" prefWidth="120.0" />
+                        <Button layoutX="150.0" layoutY="120.0" mnemonicParsing="false" onAction="#adicionarTipoAnexo" text="Adicionar" />
+                        <Button layoutX="151.0" layoutY="171.0" mnemonicParsing="false" onAction="#RemoverTipoAnexo" text="Remover" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

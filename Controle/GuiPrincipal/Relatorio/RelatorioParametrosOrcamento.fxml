@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="170.0" prefWidth="310.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Relatorio.RelatorioParametrosOrcamentoController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="14.0" layoutY="16.0" prefHeight="17.0" prefWidth="110.0" text="Item de orçamento:" />
+      <Label layoutX="14.0" layoutY="55.0" prefWidth="110.0" text="Plano de Conta:" />
+      <Label layoutX="14.0" layoutY="94.0" prefWidth="110.0" text="Fornecedor:" />
+      <TextField fx:id="tarefa" layoutX="145.0" layoutY="14.0" />
+      <TextField fx:id="planoCusto" layoutX="145.0" layoutY="53.0" />
+      <TextField fx:id="fornecedor" layoutX="145.0" layoutY="92.0" />
+      <Button layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+      <Button layoutX="248.0" layoutY="131.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+   </children>
+</AnchorPane>

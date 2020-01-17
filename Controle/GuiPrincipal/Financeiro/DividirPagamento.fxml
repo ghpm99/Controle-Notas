@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="908.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Financeiro.DividirPagamentoController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="83.0" text="Valor Liquido:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <TextField fx:id="valorLiquidoCampo" editable="false" layoutX="97.0" layoutY="10.0" AnchorPane.leftAnchor="97.0" AnchorPane.topAnchor="10.0" />
+      <Label layoutX="264.0" layoutY="14.0" prefHeight="17.0" prefWidth="83.0" text="Valor baixado:" AnchorPane.leftAnchor="264.0" AnchorPane.topAnchor="14.0" />
+      <TextField fx:id="valorBaixadoCampo" editable="false" layoutX="347.0" layoutY="10.0" AnchorPane.leftAnchor="347.0" AnchorPane.topAnchor="10.0" />
+      <Label layoutX="514.0" layoutY="14.0" prefHeight="17.0" prefWidth="83.0" text="Valor aberto:" AnchorPane.leftAnchor="514.0" AnchorPane.topAnchor="14.0" />
+      <TextField fx:id="valorAbertoCampo" editable="false" layoutX="597.0" layoutY="10.0" AnchorPane.leftAnchor="597.0" AnchorPane.topAnchor="10.0" />
+      <TableView fx:id="notasAbertoTabela" editable="true" layoutX="10.0" layoutY="53.0" prefHeight="487.0" prefWidth="880.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="53.0">
+         <columns>
+            <TableColumn fx:id="numeroNota" prefWidth="79.0" text="Numero" />
+            <TableColumn fx:id="fornecedorNota" prefWidth="231.0" text="Fornecedor" />
+            <TableColumn fx:id="cnpjNota" prefWidth="129.0" text="CNPJ" />
+            <TableColumn fx:id="vencimentoNota" prefWidth="134.0" text="Vencimento" />
+            <TableColumn fx:id="vencimentoRealNota" prefWidth="130.0" text="Vencimento Real" />
+            <TableColumn fx:id="valorNota" prefWidth="100.0" text="Valor" />
+            <TableColumn prefWidth="75.0" text="Baixada" />
+         </columns>
+      </TableView>
+      <MenuButton layoutX="795.0" layoutY="553.0" mnemonicParsing="false" text="Ações" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#dividir" text="Dividir" />
+          <MenuItem mnemonicParsing="false" onAction="#juntar" text="Juntar" />
+        </items>
+      </MenuButton>
+      <Label fx:id="statusLabel" layoutX="14.0" layoutY="557.0" prefHeight="17.0" prefWidth="779.0" />
+   </children>
+</AnchorPane>

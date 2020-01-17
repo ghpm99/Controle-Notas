@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="214.0" prefWidth="309.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Nota.AlterarLoteNotaController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <CheckBox fx:id="dataSelect" layoutX="14.0" layoutY="52.0" mnemonicParsing="false" text="Data" />
+      <CheckBox fx:id="classificadaSelect" layoutX="14.0" layoutY="98.0" mnemonicParsing="false" text="Classificada:" />
+      <DatePicker fx:id="data" layoutX="108.0" layoutY="48.0" />
+      <CheckBox fx:id="classificada" layoutX="108.0" layoutY="98.0" mnemonicParsing="false" text="Classificada" />
+      <Button layoutX="129.0" layoutY="159.0" mnemonicParsing="false" onAction="#alterar" text="Alterar" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Financeiro.DadoBancarioController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="dadosBancariosTable" editable="true" layoutX="14.0" layoutY="40.0" prefHeight="504.0" prefWidth="713.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="40.0">
+        <columns>
+          <TableColumn fx:id="bancoTableColumn" prefWidth="75.0" text="Banco" />
+          <TableColumn fx:id="cnpjTableColumn" prefWidth="75.0" text="CNPJ/CPF" />
+            <TableColumn fx:id="nomeTableColumn" prefWidth="75.0" text="Nome" />
+            <TableColumn fx:id="agenciaTableColumn" prefWidth="75.0" text="Agencia" />
+            <TableColumn fx:id="contaTableColumn" prefWidth="75.0" text="Conta" />
+            <TableColumn fx:id="tipoTableColumn" prefWidth="75.0" text="Tipo" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ToolBar layoutX="7.0" layoutY="6.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#incluir" text="Incluir" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

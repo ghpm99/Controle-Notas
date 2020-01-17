@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="697.0" prefWidth="733.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Nota.NotasSubmetidasController">
+    <stylesheets>
+        <URL value="@/GuiPrincipal/controle.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="notas" layoutX="14.0" layoutY="45.0" prefHeight="606.0" prefWidth="702.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="45.0">
+         <columns>
+            <TableColumn fx:id="numero" prefWidth="110.0" text="Numero" />
+            <TableColumn fx:id="serie" prefWidth="70.0" text="Serie" />
+            <TableColumn fx:id="fornecedor" prefWidth="230.0" text="Fornecedor" />
+            <TableColumn fx:id="descricao" prefWidth="230.0" text="Descrição" />
+            <TableColumn fx:id="valor" prefWidth="100.0" text="Valor" />
+            <TableColumn fx:id="vencimento" prefWidth="110.0" text="Vencimento" />
+            <TableColumn fx:id="vencimentoReal" prefWidth="110.0" text="Vencimento Real" />
+            <TableColumn fx:id="aprovado" prefWidth="75.0" text="Aprovado" />
+            <TableColumn fx:id="tipo" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="prenota" prefWidth="75.0" text="Pre Nota" />
+            <TableColumn fx:id="classificada" prefWidth="75.0" text="Classificada" />
+            <TableColumn fx:id="lancada" prefWidth="75.0" text="Lançada" />
+            <TableColumn fx:id="observacao" prefWidth="350.0" text="Observação" />
+         </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="16.0" text="Pesquisar" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="16.0" />
+      <ComboBox fx:id="campos" layoutX="217.0" layoutY="12.0" prefWidth="150.0" AnchorPane.leftAnchor="217.0" AnchorPane.topAnchor="12.0" />
+      <TextField fx:id="campo" layoutX="382.0" layoutY="12.0" onKeyPressed="#buscarEnter" prefHeight="25.0" prefWidth="270.0" AnchorPane.leftAnchor="382.0" AnchorPane.rightAnchor="81.0" AnchorPane.topAnchor="12.0" />
+      <Button layoutX="664.0" layoutY="12.0" mnemonicParsing="false" onAction="#buscarNota" text="Buscar" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="12.0" />
+      <Label fx:id="status" layoutX="14.0" layoutY="664.0" prefHeight="17.0" prefWidth="574.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="145.0" />
+      <MenuButton layoutX="632.0" layoutY="660.0" mnemonicParsing="false" text="Workflow" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="18.0">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#aprovarNota" text="Aprovar" />
+          <MenuItem mnemonicParsing="false" onAction="#retornarNota" text="Retornar" />
+            <MenuItem mnemonicParsing="false" onAction="#rejeitarNota" text="Rejeitar" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>

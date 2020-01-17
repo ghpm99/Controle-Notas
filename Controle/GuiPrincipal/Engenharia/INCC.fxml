@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="486.0" prefWidth="640.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Engenharia.INCCController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="incc" layoutX="14.0" layoutY="14.0" prefHeight="417.0" prefWidth="617.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="14.0">
+        <columns>
+          <TableColumn fx:id="mesColumn" prefWidth="75.0" text="Mês" />
+          <TableColumn fx:id="indiceColumn" prefWidth="75.0" text="Indice" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <DatePicker fx:id="mes" layoutX="14.0" layoutY="447.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="indice" layoutX="211.0" layoutY="447.0" promptText="Indice" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="211.0" />
+      <Button layoutX="381.0" layoutY="447.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="381.0" />
+   </children>
+</AnchorPane>

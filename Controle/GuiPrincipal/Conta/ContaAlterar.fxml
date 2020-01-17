@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="348.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiPrincipal.Conta.ContaAlterarController">
+    <stylesheets>
+        <URL value="@controle.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="13.0" layoutY="61.0" prefHeight="17.0" prefWidth="96.0" text="Nome" />
+      <TextField fx:id="nome" layoutX="112.0" layoutY="57.0" prefHeight="25.0" prefWidth="204.0" />
+      <Label layoutX="13.0" layoutY="96.0" prefHeight="17.0" prefWidth="96.0" text="Categoria" />
+      <TextField fx:id="categoria" layoutX="112.0" layoutY="92.0" prefHeight="25.0" prefWidth="204.0" />
+      <Label layoutX="13.0" layoutY="132.0" prefHeight="17.0" prefWidth="96.0" text="E-Mail" />
+      <TextField fx:id="email" layoutX="112.0" layoutY="128.0" prefHeight="25.0" prefWidth="204.0" />
+      <CheckBox fx:id="compra" layoutX="14.0" layoutY="161.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="compra" />
+      <CheckBox fx:id="almoxarife" layoutX="14.0" layoutY="194.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="almoxarife" />
+      <CheckBox fx:id="administracao" layoutX="14.0" layoutY="225.0" mnemonicParsing="false" text="administracao" />
+      <CheckBox fx:id="engenharia" layoutX="14.0" layoutY="253.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="engenharia" />
+      <CheckBox fx:id="financeiro" layoutX="14.0" layoutY="281.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="financeiro" />
+      <CheckBox fx:id="gerencia" layoutX="14.0" layoutY="310.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="gerencia" />
+      <CheckBox fx:id="logado" layoutX="14.0" layoutY="338.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="logado" />
+      <Label layoutX="13.0" layoutY="370.0" prefHeight="17.0" prefWidth="96.0" text="Ultimo Login" />
+      <TextField fx:id="ultimoLogin" layoutX="109.0" layoutY="366.0" prefHeight="25.0" prefWidth="204.0" />
+      <Label layoutX="13.0" layoutY="404.0" prefHeight="17.0" prefWidth="96.0" text="Expira" />
+      <TextField fx:id="expira" layoutX="109.0" layoutY="400.0" prefHeight="25.0" prefWidth="204.0" />
+      <CheckBox fx:id="block" layoutX="13.0" layoutY="525.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Block" />
+      <Button layoutX="278.0" layoutY="521.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+      <Label layoutX="13.0" layoutY="25.0" prefHeight="17.0" prefWidth="96.0" text="Login" />
+      <TextField fx:id="login" layoutX="113.0" layoutY="21.0" prefHeight="25.0" prefWidth="204.0" />
+      <Button layoutX="126.0" layoutY="521.0" mnemonicParsing="false" onAction="#alterarSenha" text="Alterar Senha" />
+      <Label layoutX="13.0" layoutY="442.0" prefHeight="17.0" prefWidth="88.0" text="Senha" />
+      <PasswordField fx:id="senha" layoutX="108.0" layoutY="438.0" prefHeight="25.0" prefWidth="204.0" />
+      <Slider fx:id="nivel" blockIncrement="2.0" layoutX="15.0" layoutY="475.0" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="14.0" prefWidth="310.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+   </children>
+</AnchorPane>
