@@ -13,7 +13,7 @@ import Util.Dado;
  */
 public class Endereco extends Dado {
 
-    private String nome = "", endereço = "", codigoPostal = "", rua = "", numero = "", cidade = "", distrito = "", estado = "", pais = "";
+    private String nome = "", endereco = "", codigoPostal = "", rua = "", numero = "", cidade = "", distrito = "", estado = "", pais = "";
 
     public String getNome() {
         return nome;
@@ -23,12 +23,12 @@ public class Endereco extends Dado {
         this.nome = nome;
     }
 
-    public String getEndereço() {
-        return endereço;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getCodigoPostal() {

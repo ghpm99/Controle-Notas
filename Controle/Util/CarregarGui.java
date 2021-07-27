@@ -71,8 +71,8 @@ public class CarregarGui {
                     long antes = new Date().getTime();
                     controller.run();
                     long depois = new Date().getTime();
-                    long diferença = depois - antes;
-                    Main.getInstancia().ping(diferença);
+                    long diferenca = depois - antes;
+                    Main.getInstancia().ping(diferenca);
                     return null;
                 }
 
@@ -169,8 +169,8 @@ public class CarregarGui {
                     e.printStackTrace();
                 }
                 long depois = new Date().getTime();
-                long diferença = depois - antes;
-                Main.getInstancia().ping(diferença);
+                long diferenca = depois - antes;
+                Main.getInstancia().ping(diferenca);
                 return parent;
             }
 
@@ -220,8 +220,8 @@ public class CarregarGui {
                     e.printStackTrace();
                 }
                 long depois = new Date().getTime();
-                long diferença = depois - antes;
-                Main.getInstancia().ping(diferença);
+                long diferenca = depois - antes;
+                Main.getInstancia().ping(diferenca);
                 return parent;
             }
 

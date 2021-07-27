@@ -180,8 +180,8 @@ public enum Cliente {
             public void run() {
 
                 long tempo = new Date().getTime();
-                long diferença = tempo - ultimo;
-                if (diferença > ((1000 * 60) * 2)) {
+                long diferenca = tempo - ultimo;
+                if (diferenca > ((1000 * 60) * 2)) {
                     if (!enviando) {
                         sendData(new Request() {
                             @Override

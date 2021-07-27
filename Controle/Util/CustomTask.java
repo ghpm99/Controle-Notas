@@ -17,8 +17,8 @@ public abstract class CustomTask<V> extends Task<V> {
         long antes = new Date().getTime();
         V retorno = executar();
         long depois = new Date().getTime();
-        long diferença = depois - antes;
-        Main.getInstancia().ping(diferença);
+        long diferenca = depois - antes;
+        Main.getInstancia().ping(diferenca);
         return retorno;
     }
 

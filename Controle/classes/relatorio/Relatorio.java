@@ -5,36 +5,9 @@
  */
 package classes.relatorio;
 
-import Conexao.Cliente;
-import classes.contrato.Contrato;
-import classes.financeiro.Diario;
-import classes.financeiro.Fluxo;
-import classes.financeiro.NotaFinanceiro;
-import GuiPrincipal.Relatorio.RelatorioNotaController;
-import GuiPrincipal.Util.CarregarController;
-import classes.nota.anexo.AnexoNota;
-import classes.nota.item.ItemNota;
-import classes.nota.Nota;
-import Util.CarregarGui;
-import Util.Conversao;
 import static Util.Conversao.dinheiro;
 import static Util.Conversao.longToString;
-import Util.Log;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.Font.FontFamily;
-import com.itextpdf.text.PageSize;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.Phrase;
-import com.itextpdf.text.pdf.PdfContentByte;
-import com.itextpdf.text.pdf.PdfCopy;
-import com.itextpdf.text.pdf.PdfImportedPage;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
-import com.itextpdf.text.pdf.PdfReader;
-import com.itextpdf.text.pdf.PdfSmartCopy;
-import com.itextpdf.text.pdf.PdfWriter;
+
 import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
@@ -54,7 +27,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.scene.layout.BorderPane;
+
+import org.apache.poi.hwpf.usermodel.Paragraph;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CreationHelper;
@@ -63,6 +37,37 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xwpf.usermodel.Document;
+
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.Font.FontFamily;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Phrase;
+import com.itextpdf.text.pdf.PdfContentByte;
+import com.itextpdf.text.pdf.PdfCopy;
+import com.itextpdf.text.pdf.PdfImportedPage;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfReader;
+import com.itextpdf.text.pdf.PdfSmartCopy;
+import com.itextpdf.text.pdf.PdfWriter;
+
+import Conexao.Cliente;
+import GuiPrincipal.Relatorio.RelatorioNotaController;
+import GuiPrincipal.Util.CarregarController;
+import Util.CarregarGui;
+import Util.Conversao;
+import Util.Log;
+import classes.contrato.Contrato;
+import classes.financeiro.Diario;
+import classes.financeiro.Fluxo;
+import classes.financeiro.NotaFinanceiro;
+import classes.nota.Nota;
+import classes.nota.anexo.AnexoNota;
+import classes.nota.item.ItemNota;
+import javafx.scene.layout.BorderPane;
+
 
 /**
  *

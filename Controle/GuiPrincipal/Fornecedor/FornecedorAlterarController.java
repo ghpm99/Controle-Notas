@@ -69,25 +69,25 @@ public class FornecedorAlterarController implements Initializable, PaneControlle
     @FXML
     private TextField naturezaLabel;
     @FXML
-    private TableView<Endereco> endereçoTableView;
+    private TableView<Endereco> enderecoTableView;
     @FXML
-    private TableColumn<Endereco, String> nomeEndereçoTableColumn;
+    private TableColumn<Endereco, String> nomeEnderecoTableColumn;
     @FXML
-    private TableColumn<Endereco, String> endereçoEndereçoTableColumn;
+    private TableColumn<Endereco, String> enderecoEnderecoTableColumn;
     @FXML
-    private TableColumn<Endereco, String> codigoPostalEndereçoTableColumn;
+    private TableColumn<Endereco, String> codigoPostalEnderecoTableColumn;
     @FXML
-    private TableColumn<Endereco, String> ruaEndereçoTableColumn;
+    private TableColumn<Endereco, String> ruaEnderecoTableColumn;
     @FXML
-    private TableColumn<Endereco, String> numeroEndereçoTableColumn;
+    private TableColumn<Endereco, String> numeroEnderecoTableColumn;
     @FXML
-    private TableColumn<Endereco, String> cidadeEndereçoTableColumn;
+    private TableColumn<Endereco, String> cidadeEnderecoTableColumn;
     @FXML
-    private TableColumn<Endereco, String> distritoEndereçoTableColumn;
+    private TableColumn<Endereco, String> distritoEnderecoTableColumn;
     @FXML
-    private TableColumn<Endereco, String> estadoEndereçoTableColumn;
+    private TableColumn<Endereco, String> estadoEnderecoTableColumn;
     @FXML
-    private TableColumn<Endereco, String> paisEndereçoTableColumn;
+    private TableColumn<Endereco, String> paisEnderecoTableColumn;
     @FXML
     private TableView<Contato> contatoTableView;
     @FXML
@@ -116,15 +116,15 @@ public class FornecedorAlterarController implements Initializable, PaneControlle
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        nomeEndereçoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("nome"));
-        endereçoEndereçoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("endereço"));
-        codigoPostalEndereçoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("codigoPostal"));
-        ruaEndereçoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("rua"));
-        numeroEndereçoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("numero"));
-        cidadeEndereçoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("cidade"));
-        distritoEndereçoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("distrito"));
-        estadoEndereçoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("estado"));
-        paisEndereçoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("pais"));
+        nomeEnderecoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("nome"));
+        enderecoEnderecoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("endereco"));
+        codigoPostalEnderecoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("codigoPostal"));
+        ruaEnderecoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("rua"));
+        numeroEnderecoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("numero"));
+        cidadeEnderecoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("cidade"));
+        distritoEnderecoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("distrito"));
+        estadoEnderecoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("estado"));
+        paisEnderecoTableColumn.setCellValueFactory(new PropertyValueFactory<Endereco, String>("pais"));
 
         descricaoContatoTableColumn.setCellValueFactory(new PropertyValueFactory<Contato, String>("descricao"));
         descricaoContatoTableColumn.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -349,7 +349,7 @@ public class FornecedorAlterarController implements Initializable, PaneControlle
     }
 
     @FXML
-    void incluirEndereço(ActionEvent event) {
+    void incluirEndereco(ActionEvent event) {
 
     }
 
@@ -440,7 +440,7 @@ public class FornecedorAlterarController implements Initializable, PaneControlle
     }
 
     @FXML
-    void removerEndereço(ActionEvent event) {
+    void removerEndereco(ActionEvent event) {
 
     }
 

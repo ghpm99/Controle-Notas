@@ -198,8 +198,8 @@ public class GuiMainController implements Initializable, PrincipalGUI {
                     PaneController controller = (PaneController) loader.getController();
                     controller.setPaneController(area);
                     long depois = new Date().getTime();
-                    long diferença = depois - antes;
-                    Main.getInstancia().ping(diferença);
+                    long diferenca = depois - antes;
+                    Main.getInstancia().ping(diferenca);
                     return parent;
                 } catch (Exception e) {
                     e.printStackTrace();
