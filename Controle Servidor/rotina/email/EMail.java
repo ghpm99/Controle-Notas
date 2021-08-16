@@ -173,9 +173,9 @@ public class EMail {
     private void separar(String arg, Status status) {
         String[] aa = arg.split("<");
         for (String a : aa) {            
-            if (a.startsWith("https://pmw.tishmanspeyer.com/pmweb/CostManagementProgressInvoices.aspx?")) {                
+            if (a.startsWith("")) {                
                 String[] b = a.split(">");
-                String c = b[0].replaceAll("https://pmw.tishmanspeyer.com/pmweb/CostManagementProgressInvoices.aspx?", "");
+                String c = b[0].replaceAll("", "");
                 String[] d = c.split("&");
                 status.setId(Integer.valueOf(d[0].replaceAll("[^0-9]", "")));
             }
@@ -191,7 +191,7 @@ public class EMail {
      */
     public void enviarSugestao(int avaliacao, String assunto, String campo, String usuario) {
         try {
-            String para = "ghpm99@hotmail.com";
+            String para = "";
 
             Properties properties = System.getProperties();
             properties.put("mail.smtp.host", "smtp-mail.outlook.com");

@@ -47,7 +47,7 @@ public enum Configuracao {
 
             String dburl = "jdbc:derby:" + Referencia.getInstancia().getConfiguracao() + ";";
 
-            connection = DriverManager.getConnection(dburl, "root", "5316");
+            connection = DriverManager.getConnection(dburl, "", "");
 
             Principal.setStatus("Configurações carregadas");
             executando = true;
